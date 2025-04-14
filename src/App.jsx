@@ -106,13 +106,13 @@ setTimeout(() => setFlipTrigger(true), 0);
     loadPageText();
   }, [pdfDoc, currentPage]);
 
-  const handleHover = (word, index) => {
-    if (speechOn && hoveredIndex !== index) {
-      cancel();
-      speak({ text: word });
-    }
-    setHoveredIndex(index);
-  };
+const handleHover = (word, index) => {
+  if (speechOn && hoveredIndex !== index) {
+    speak(word);
+  }
+  setHoveredIndex(index);
+};
+
 
   const nextPage = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
