@@ -4,6 +4,8 @@ import * as pdfjsLib from 'pdfjs-dist/build/pdf';
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
 import { useSpeechSynthesis } from 'react-speech-kit';
 import mammoth from 'mammoth';
+const { speak, cancel } = useSpeechSynthesis();
+
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +21,13 @@ export default function App() {
   const [totalPages, setTotalPages] = useState(0);
   const [flipTrigger, setFlipTrigger] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
+//   const speak = (text) => {
+//   window.speechSynthesis.cancel(); // cancel any ongoing speech
+//   const utterance = new SpeechSynthesisUtterance(text);
+//   window.speechSynthesis.speak(utterance);
+// };
+
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
