@@ -12,7 +12,6 @@ export default function App() {
   const [textItems, setTextItems] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [speechOn, setSpeechOn] = useState(true);
-  const { speak, cancel } = useSpeechSynthesis();
   const [pdfDoc, setPdfDoc] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
