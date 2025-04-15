@@ -147,9 +147,10 @@ const handleHover = (word, index) => {
          onChange={handleFileChange} className="form-control w-auto d-inline-block mt-3" />
       </div>
 
-        <button onClick={() => setSpeechOn(!speechOn)} className="btn btn-sm btn-secondary ">
-          {speechOn ? '🔈' : '🔇'}
+        <button onClick={() => {setSpeechOn(!speechOn);
+                  window.speechSynthesis.cancel();}} className="btn btn-sm btn-secondary ">{speechOn ? '🔈' : '🔇'}
         </button>
+
       </div>
 
 
