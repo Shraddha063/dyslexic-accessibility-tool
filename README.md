@@ -4,7 +4,7 @@ This React app provides a simple accessibility tool designed to help users with 
 
 ## Features
 
-- Textarea to input text
+- Choose PDF files. Text will be loaded in the Text-Box.working on Word/Doc file uploads
 - Hover on words to highlight them
 - Light/Dark mode toggle for readability
 
